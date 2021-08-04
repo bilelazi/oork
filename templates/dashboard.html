@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Ample lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Ample admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description"
+        content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Ample Admin Lite Template by WrapPixel</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="static/plugins/images/favicon.png">
+    <!-- Custom CSS -->
+    <link href="static/plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="static/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
+    <!-- Custom CSS -->
+    <link href="static/css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div>
+
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Three charts -->
+                <!-- ============================================================== -->
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-4 col-md-12">
+                        <a href="/scrap" style="display: contents;!important">
+                            <div class="white-box analytics-info">
+                                <h3 class="box-title">Scraping</h3>
+                                <ul class="list-inline two-part d-flex align-items-center mb-0">
+                                    <li>
+
+                                    </li>
+                                    <li class="ms-auto"><span class="counter text-purple"></span></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-12">
+                        <a href="/clean" style="display: contents;!important">
+                            <div class="white-box analytics-info">
+                                <h3 class="box-title">Cleaning</h3>
+                                <ul class="list-inline two-part d-flex align-items-center mb-0">
+                                    <li>
+
+                                    </li>
+                                    <li class="ms-auto"><span class="counter text-purple"></span></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+                        <a href="/modele" style="display: contents;!important">
+                            <div class="white-box analytics-info">
+                                <h3 class="box-title">Modeling</h3>
+                                <ul class="list-inline two-part d-flex align-items-center mb-0">
+                                    <li>
+
+                                    </li>
+                                    <li class="ms-auto"><span class="counter text-purple"></span></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- PRODUCTS YEARLY SALES -->
+                <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- RECENT SALES -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+
+                            <div class="table-responsive">
+                                <table class="table no-wrap">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">id</th>
+                                            <th class="border-top-0">link</th>
+                                            <th class="border-top-0">title</th>
+                                            <th class="border-top-0">description</th>
+                                            <th class="border-top-0">date</th>
+                                            <th class="border-top-0">tags</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for d in data %}
+                                        <tr>
+                                            <td>{{ d[0] }}</td>
+                                            <td>{{ d[1][0:20] }}...</td>
+                                            <td class="txt-oflo">{{ d[2][0:20]}}...</td>
+                                            <td>{{ d[3][0:50]}}</td>
+                                            <td>{{ d[4]}}</td>
+                                            <td><span class="text-success">{{ d[5]}}</span></td>
+                                        </tr>
+                                        {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- Recent Comments -->
+                <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- footer -->
+                <!-- ============================================================== -->
+                <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
+                        href="https://www.wrappixel.com/">wrappixel.com</a>
+                </footer>
+                <!-- ============================================================== -->
+                <!-- End footer -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Page wrapper  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Wrapper -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- All Jquery -->
+        <!-- ============================================================== -->
+        <script src="static/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap tether Core JavaScript -->
+        <script src="static/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/app-style-switcher.js"></script>
+        <script src="static/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+        <!--Wave Effects -->
+        <script src="static/js/waves.js"></script>
+        <!--Menu sidebar -->
+        <script src="static/js/sidebarmenu.js"></script>
+        <!--Custom JavaScript -->
+        <script src="static/js/custom.js"></script>
+        <!--This page JavaScript -->
+        <!--chartis chart-->
+        <script src="static/plugins/bower_components/chartist/dist/chartist.min.js"></script>
+        <script
+            src="static/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+        <script src="static/js/pages/dashboards/dashboard1.js"></script>
+</body>
+
+</html>

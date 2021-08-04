@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <!--<link href="static/css/singlepage.css" rel="stylesheet"/>-->
+
+    <link href="{{url_for('static',filename='css/singlepage.css')}}" rel="stylesheet" />
+
+</head>
+
+
+<body>
+    <div class="image-aboutus-banner" style="margin-top:-80px">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="lg-text">About this offre</h1>
+                    <p class="image-aboutus-para">the Most valible information about an offre, you can get more details
+                        in the orginal link . you can find it below </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% for off in offre %}
+    <div class="container paddingTB60">
+        <div class="row">
+
+            <div class="col-lg-8">
+                <hr>
+                <h2>{{ off[7] }}</h2>
+                <hr>
+                <h3>date de publication : {{ off[4] }}</h3>
+                <hr>
+
+                <p class="lead">{{ off[6]}}</p>
+
+                <hr>
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="well">
+                    <h4>Quick Links</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="{{ off[1]}}">original post :{{ off[1][8:25] }}</a>
+                                </li>
+                                <li><a href="/">Home</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="well bgcolor-skyblue">
+                        <h4>Tags utilisés</h4>
+                        <p>{{ off[5] }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+</body>
+
+</div>
+<div class="footer-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center ">
+                <div class="copyright-text">
+                    <p>CopyRight © 2017 Digital All Rights Reserved</p>
+                </div>
+            </div> <!-- End Col -->
+
+        </div>
+    </div>
+</div>
+</div>
+
+</html>
